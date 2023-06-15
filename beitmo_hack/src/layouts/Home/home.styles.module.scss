@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.infoContent {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > div {
+    padding-right: 24px;
+  }
+
+  & > div:last-child {
+    padding-right: 0;
+  }
+}
+
+.events {
+  max-width: 1000px;
+}
+
+.description {
+  font-size: $font-xs;
+  line-height: 140%;
+}
+
+.headingWrapper {
+  //display: flex;
+  //justify-content: space-between;
+  position: relative;
+}
+

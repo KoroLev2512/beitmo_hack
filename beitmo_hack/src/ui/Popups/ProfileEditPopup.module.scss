@@ -1,0 +1,52 @@
+.popup {
+  padding: 32px 40px;
+  max-width: 600px;
+  min-height: 500px;
+}
+
+.profilePic {
+  margin-right: 40px;
+  width: 182px;
+  position: relative;
+  top: 20px;
+  img {
+    border-radius: 30px;
+  }
+}
+
+.content {
+  display: flex;
+}
+
+.form {
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.input {
+  margin-right: 24px;
+  flex: 1;
+  color: var(--gray-color)
+}
+
+.input:last-of-type {
+  margin: 0;
+  color: var(--gray-color);
+}
+
+.actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    width: 200px;
+    height: 33px;
+  }
+}

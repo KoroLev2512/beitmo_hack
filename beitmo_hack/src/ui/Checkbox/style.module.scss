@@ -1,0 +1,14 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    margin-right: 8px;
+  }
+
+  .label {
+    position: relative;
+    top: 3px;
+  }
+}

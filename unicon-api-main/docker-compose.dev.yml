@@ -1,0 +1,55 @@
+version: '3.8'
+services:
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.development # Use the development Dockerfile
+    container_name: api
+    restart: unless-stopped
+    volumes:
+      - .:/app:delegated # Mount current directory to /app in the container
+      - /app/node_modules # Mount the node_modules directory as a volume to avoid installation in the container
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development # Set environment variable for development
+      - PORT=4000 # Set environment variable for port
+      - MONGO_URI=mongodb://db:27017/unicon # Set environment variable for MongoDB URI
+      - JWT_SECRET=mysecret # Set environment variable for JWT secret
+      - JWT_EXPIRATION=1h # Set environment variable for JWT expiration time
+    depends_on:
+      - db
+
+
+  front:
+    build:
+      context: ../beitmo_hack
+      dockerfile: Dockerfile.dev
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+    container_name: front
+    restart: unless-stopped
+    volumes:
+      - ../beitmo_hack:/app:delegated # Mount current directory to /app in the container
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80" # Expose port 80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+volumes:
+  mongo-data:

@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+.text {
+  font-size: $font-xxxl;
+  font-family: "Bold";
+  color: $brand-blue-color;
+  line-height: 100%;
+  @include no-select;
+}
+
+.dot {
+  color: $brand-red-color;
+}

@@ -1,0 +1,73 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "user_isu_number": 285861,
+      "user_name": "Данил",
+      "user_surname": "Кладницкий",
+      "user_patronymic": "Максимович",
+      "phone": "+79895182530",
+      "vk_link": "https://vk.com/kladnitskiy",
+      "mail": "core@pixel@gmail.com",
+      "is_russian_citizenship": true
+    }
+  ],
+  "event": [
+    {
+      "id": 1,
+      "event_name": "Экскурсия по Царскому селу",
+      "time_start": "2022-11-09T14:59:11.727Z",
+      "time_end": "2022-11-09T19:59:11.727Z",
+      "description": "Роскошные балы, великие дуэли и неповторимая архитектура. Попасть в эпоху дворцовых переворотов вам поможет поездка в Царское село.",
+      "url_pdf": "https://www.africau.edu/images/default/sample.pdf",
+      "people_count": 100,
+      "coefficient": 100,
+      "image": "https://tripplanet.ru/wp-content/uploads/europe/russia/karelia/dostoprimechatelnosti-karelii.jpg"
+    },
+    {
+      "id": 2,
+      "event_name": "Экскурсия по Царскому селу",
+      "time_start": "2022-11-09T14:59:11.727Z",
+      "time_end": "2022-14-09T19:59:11.727Z",
+      "description": "Роскошные балы, великие дуэли и неповторимая архитектура. Попасть в эпоху дворцовых переворотов вам поможет поездка в Царское село.",
+      "url_pdf": "https://www.africau.edu/images/default/sample.pdf",
+      "people_count": 100,
+      "coefficient": 100,
+      "image": "https://tripplanet.ru/wp-content/uploads/europe/russia/karelia/dostoprimechatelnosti-karelii.jpg"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Фотоотчёт с поездки в Москву",
+      "text": "Lorem ipsum dolor sit amet, ctetur adipiscing elit, sed do eiusmod tempor incididunt...",
+      "date": "2022-11-09T14:59:11.727Z"
+    },
+    {
+      "id": 2,
+      "title": "Фотоотчёт с поездки в Москву",
+      "text": "Lorem ipsum dolor sit amet, ctetur adipiscing elit, sed do eiusmod tempor incididunt...",
+      "date": "2022-11-09T14:59:11.727Z"
+    },
+    {
+      "id": 3,
+      "title": "Фотоотчёт с поездки в Москву",
+      "text": "Lorem ipsum dolor sit amet, ctetur adipiscing elit, sed do eiusmod tempor incididunt...",
+      "date": "2022-11-09T14:59:11.727Z"
+    },
+    {
+      "id": 2,
+      "event_name": "Карелия",
+      "time_start": "",
+      "time_end": "",
+      "description": "111",
+      "url_pdf": "111",
+      "people_count": 100,
+      "coefficient": 100,
+      "image": "ff"
+    }
+  ],
+  "ping": {
+    "status": true
+  }
+}

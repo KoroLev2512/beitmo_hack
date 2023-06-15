@@ -1,0 +1,29 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/variables.scss";
+
+.outerWrapper {
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: $white-color;
+  padding: 32px 32px 0 0;
+  width: 100%;
+}
+
+.centerWrapper {
+  padding: 32px 0 0 0;
+}
+
+.wrapper {
+  padding: 32px 36px;
+  box-sizing: border-box;
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  border-radius: 30px 30px 0 0;
+  background-color: $light-gray-color;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

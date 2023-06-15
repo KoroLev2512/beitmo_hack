@@ -1,0 +1,24 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/colors.scss";
+@import "../../../styles/variables.scss";
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  color: $gray-color;
+  cursor: pointer;
+
+  margin-bottom: 12px;
+
+  &:hover {
+    color: $brand-blue-color;
+
+    svg path {
+      stroke: $brand-blue-color;
+    }
+  }
+
+  svg{
+    margin-right: 8px;
+  }
+}

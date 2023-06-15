@@ -1,0 +1,12 @@
+@import "../../../styles/colors.scss";
+
+.pic {
+  border-radius: 100%;
+  border: 1px solid $secondary-gray-color !important;
+  overflow: hidden;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}

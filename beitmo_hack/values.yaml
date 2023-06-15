@@ -1,0 +1,9 @@
+networkAccess:
+  external:
+    enabled: true
+    domain: events.itmo.space
+    pathPrefix: /
+    ingressClassName: itmo-events
+  healthcheck:
+    enabled: false
+replicas: 1
