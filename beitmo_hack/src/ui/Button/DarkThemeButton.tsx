@@ -11,7 +11,7 @@ function ColorMode() {
 
 	return (
 		<div className={styles.toggleWrapper}>
-			<input type="checkbox" id="theme-toggle" defaultChecked={!isDarkMode} onClick={handleToggleDarkMode}/>
+			<input type="checkbox" id="theme-toggle" defaultChecked={isDarkMode ?? false} onClick={handleToggleDarkMode}/>
 			<label htmlFor="theme-toggle" className={styles.toggle}>
 				<span className={styles.toggleRay}>
 					<span className={styles.ray}></span>

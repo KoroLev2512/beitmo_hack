@@ -1,7 +1,6 @@
 import {create} from "zustand";
 import {devtools} from "zustand/middleware";
 import {immer} from "zustand/middleware/immer";
-import axios from "../api/axios";
 import {AppState} from "../types/dto/app.dto";
 
 export const useAppStore = create<AppState>()(devtools(immer((set) => ({
@@ -9,7 +8,7 @@ export const useAppStore = create<AppState>()(devtools(immer((set) => ({
 	loading: false,
 	profilePageIsOpen: false,
 	notificationsVisible: true,
-	isDarkMode: false,
+	isDarkMode: null,
 	toggleProfilePage: () => {
 		set((state) => ({ profilePageIsOpen: !state.profilePageIsOpen}));
 	},
@@ -19,7 +18,7 @@ export const useAppStore = create<AppState>()(devtools(immer((set) => ({
 	checkBackend: async () => {
 		try {
 			set({ loading: true });
-			const {data} = await axios.get("events");
+			// const {data} = await axios.get("events");
 			// if (data?.Result) {
 			// 	set({backendIsAvailable: Boolean(data.Result === "App live"), loading: false});
 			// } else {
