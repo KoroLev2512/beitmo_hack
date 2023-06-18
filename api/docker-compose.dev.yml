@@ -20,7 +20,7 @@ services:
     environment:
       - NODE_ENV=development # Set environment variable for development
       - PORT=4000 # Set environment variable for port
-      - MONGO_URI=mongodb://db:27017/unicon # Set environment variable for MongoDB URI
+      - DB_URL=mongodb://db:27017/hack # Set environment variable for MongoDB URI
       - JWT_SECRET=mysecret # Set environment variable for JWT secret
       - JWT_EXPIRATION=1h # Set environment variable for JWT expiration time
     depends_on:

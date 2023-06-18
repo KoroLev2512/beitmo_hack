@@ -12,11 +12,11 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 
 // eslint-disable-next-line no-undef
-const PORT = process.env.PORT || 4444;
+const PORT = process.env.PORT || 4000;
 // eslint-disable-next-line no-undef
 const DB_URL = process.env.DB_URL;
 mongoose
-	.connect(DB_URL )
+	.connect(DB_URL)
 	.then(() => console.log("DB ok"))
 	.catch((err) => console.log("DB error", err));
 
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
 	credentials: true,
-	origin: "http://localhost:8080"
+	origin: "http://localhost:80"
 }));
 
 const storage = multer.diskStorage({

@@ -4,6 +4,7 @@ import {GET_USER, LOGIN} from "../api/requests/user.requests";
 import {create} from "zustand";
 import {devtools} from "zustand/middleware";
 import {immer} from "zustand/middleware/immer";
+import Router from "next/router";
 
 
 export const useUserStore = create<UserStore>()(devtools(immer((set) => ({
@@ -22,6 +23,7 @@ export const useUserStore = create<UserStore>()(devtools(immer((set) => ({
 			const {data} = await response;
 			set({user: data.user, loading: false});
 		} catch (error) {
+			await Router.push("/app/login");
 			set({ loading: false, user: null, error: `${error}` });
 		}
 	},
@@ -30,6 +32,7 @@ export const useUserStore = create<UserStore>()(devtools(immer((set) => ({
 			set({ loading: true, error: null });
 			const { user }: { user: object } = await axios.post(LOGIN, params);
 			set({loading: false, user});
+			await Router.push("/app/home");
 		} catch (error) {
 			set({loading: false, error: `${error}`});
 		}
