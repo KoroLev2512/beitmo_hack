@@ -30,8 +30,9 @@ const HomeLayout = ({ children, user, events, news}: IProps) => {
 					</div>
 				</Section>
 				<Text as="p" className={styles.description}>
-          Добро пожаловать на сервис ITMO.EVENTS, разработанный для студентов
-					<br /> и сотрудников Университета ИТМО.
+					Добро пожаловать на сервис ITMO.EVENTS, разработанный для студентов
+					<br />
+					и сотрудников Университета ИТМО.
 				</Text>
 			</Section>
 			{events !== [] && (

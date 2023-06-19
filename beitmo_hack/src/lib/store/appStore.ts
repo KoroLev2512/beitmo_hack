@@ -2,13 +2,14 @@ import {create} from "zustand";
 import {devtools} from "zustand/middleware";
 import {immer} from "zustand/middleware/immer";
 import {AppState} from "../types/dto/app.dto";
+import {setCookie} from "nookies";
 
 export const useAppStore = create<AppState>()(devtools(immer((set) => ({
 	backendIsAvailable: null,
 	loading: false,
 	profilePageIsOpen: false,
 	notificationsVisible: true,
-	isDarkMode: null,
+	isDarkMode: false,
 	toggleProfilePage: () => {
 		set((state) => ({ profilePageIsOpen: !state.profilePageIsOpen}));
 	},
@@ -30,6 +31,9 @@ export const useAppStore = create<AppState>()(devtools(immer((set) => ({
 		}
 	},
 	toggleDarkMode: (value: boolean) => {
+		setCookie(null, "theme", value ? "dark" : "light", {
+			path: "/"
+		});
 		set({ isDarkMode: value});
 	}
 }))));

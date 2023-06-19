@@ -4,7 +4,7 @@ export type AppState = {
     loading: boolean;
     profilePageIsOpen: boolean;
     notificationsVisible: boolean;
-    isDarkMode: boolean | null;
+    isDarkMode: boolean;
     toggleProfilePage: () => void;
     toggleNotifications: () => void;
     // eslint-disable-next-line no-unused-vars
