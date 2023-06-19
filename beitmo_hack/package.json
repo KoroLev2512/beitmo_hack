@@ -7,7 +7,8 @@
     "build": "next build",
     "export": "next export -o build",
     "start": "next start -p 80",
-    "lint": "next lint",
+    "lint": "eslint \"**/*.{ts, tsx, js}\"",
+    "lint:fix": "eslint \"**/*.{ts, tsx, js}\" --fix",
     "setup-local-server": "npx json-server --watch json-server/db.json --routes json-server/routes.json --port 8080"
   },
   "dependencies": {

@@ -1,2 +1,2 @@
 export * from "./Home/HomeLayout";
-export * from './Profile/ProfileLayout';
+export * from "./Profile/ProfileLayout";
