@@ -6,6 +6,7 @@ import ArrowIcon from "../../lib/icons/ArrowIcon";
 import styles from "./styles.module.scss";
 import {Event} from "../../lib/types/dto/event.dto";
 import {useAppStore} from "../../lib/store/appStore";
+import {isEmpty, isNull} from "lodash";
 
 interface IProps {
 	events: Event[];
@@ -15,17 +16,26 @@ export const EventList = (props: IProps) => {
 	const { events } = props;
 	const isDarkMode = useAppStore(state => state.isDarkMode);
 	const [active, setActive] = useState(0);
+
 	const slides = useMemo(
 		() =>
-			events.map((item, index) => (
+			!isEmpty(events) ? events.map((item, index) => (
 				<EventCard
 					style={{transform: `translateX(-${active * 240}px)`, transition: "all 1s"}}
 					key={index}
 					event={item}
 				/>
-			)),
+			)) : null,
 		[active, events]
 	);
+
+	if (isEmpty(events) || isNull(slides)) {
+		return (
+			<div>
+				<Text as="h2">Мероприятия отсутствуют</Text>
+			</div>
+		);
+	}
 
 	return (
 		<div>

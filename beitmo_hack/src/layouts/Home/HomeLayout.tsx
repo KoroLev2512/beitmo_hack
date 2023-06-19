@@ -25,7 +25,7 @@ const HomeLayout = ({ children, user, events, news}: IProps) => {
 			<Section margin={16}>
 				<Section margin={10}>
 					<div className={styles.headingWrapper}>
-						<Text as="h1">Привет, {user?.user_name}! 👋</Text>
+						<Text as="h1">Привет, {user?.fullName}! 👋</Text>
 						<ColorMode/>
 					</div>
 				</Section>
