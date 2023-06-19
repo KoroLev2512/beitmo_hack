@@ -1,5 +1,5 @@
 import axios from "../api/axios";
-import {UserStore} from "../types/dto/user.dto";
+import {User, UserStore} from "../types/dto/user.dto";
 import {GET_USER, LOGIN} from "../api/requests/user.requests";
 import {create} from "zustand";
 import {devtools} from "zustand/middleware";
@@ -30,7 +30,7 @@ export const useUserStore = create<UserStore>()(devtools(immer((set) => ({
 	login: async (params) => {
 		try {
 			set({ loading: true, error: null });
-			const { user }: { user: object } = await axios.post(LOGIN, params);
+			const { user }: { user: User } = await axios.post(LOGIN, params);
 			set({loading: false, user});
 			await Router.push("/app/home");
 		} catch (error) {
