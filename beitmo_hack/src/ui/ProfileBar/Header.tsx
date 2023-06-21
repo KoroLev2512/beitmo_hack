@@ -17,9 +17,9 @@ export const Header = () => {
 				<UserPic url="/thumbnail/user.jpg" height={54} width={54} />
 				<div className={styles.userInfo}>
 					<Text as="h3" className={styles.reviewOwner}>
-						{user?.user_name} {user?.user_surname}
+						{user?.fullName}
 					</Text>
-					<Text>{user?.user_isu_number}</Text>
+					<Text>{user?.isu_number || "000001"}</Text>
 				</div>
 			</Section>
 			<div className={styles.actions}>

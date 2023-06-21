@@ -1,7 +1,10 @@
-import React from "react";
 
 export type MenuItemProps = {
-  icon: React.ReactElement;
+  icon: any;
   name: string;
   href: string;
+  wrap?: {
+    name: string;
+    href: string;
+  }[]
 };

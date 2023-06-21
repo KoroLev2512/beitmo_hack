@@ -5,7 +5,8 @@ export type User = {
   avatarUrl: string;
   updatedAt: string;
   createdAt: string;
-  _id: string
+  _id: string;
+  isu_number: number;
 }
 
 export type UserStore = {

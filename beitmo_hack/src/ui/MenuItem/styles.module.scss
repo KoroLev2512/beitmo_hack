@@ -8,7 +8,7 @@
   color: $gray-color;
   cursor: pointer;
 
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 
   &:hover {
     color: $brand-blue-color;
@@ -21,4 +21,10 @@
   svg{
     margin-right: 8px;
   }
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }

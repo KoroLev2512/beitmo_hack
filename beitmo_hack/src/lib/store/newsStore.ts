@@ -9,8 +9,7 @@ export const useNewsStore = create<NewsStore>()(devtools(immer((set) => ({
 	news: null,
 	getNews: async () => {
 		const response = await axios.get(FETCH_NEWS);
-
 		const {data} = await response;
-		set({news: data.news});
+		set({news: data});
 	},
 }))));

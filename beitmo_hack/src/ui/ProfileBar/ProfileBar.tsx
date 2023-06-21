@@ -1,6 +1,4 @@
-import BellIcon from "../../lib/icons/BellIcon";
 import { Header } from "./Header";
-import { NotificationsList } from "../Notifications/NotificationsList";
 import React from "react";
 import { Section } from "../Section";
 import { Text } from "../Text";
@@ -8,6 +6,7 @@ import classNames from "classnames";
 import styles from "./styles.module.scss";
 import ArrowIcon from "../../lib/icons/ArrowIcon";
 import {useAppStore} from "../../lib/store/appStore";
+import {NewsListSidebar} from "../News/NewsListSidebar";
 
 export const ProfileBar = (): JSX.Element => {
 	return (
@@ -44,11 +43,11 @@ const ProfileBarContent = (): JSX.Element => {
 			<Header />
 			<Section margin={16}>
 				<Text as={"h3"}>
-					<BellIcon />
-          Уведомления
+					Что нового?
 				</Text>
 			</Section>
-			<NotificationsList />
+			<NewsListSidebar />
+			{/*<NotificationsList />*/}
 		</div>
 	);
 };

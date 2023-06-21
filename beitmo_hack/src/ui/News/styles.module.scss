@@ -46,3 +46,16 @@
 .newsText {
   font-size: $font-xs;
 }
+
+.NewsListSidebar {
+  &_item {
+    background: var(--primary-background-color);
+    padding: 24px;
+    border-radius: 30px;
+    &_footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

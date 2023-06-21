@@ -1,8 +1,12 @@
+import {User} from "./user.dto";
+
 export type News = {
-    news_id: number;
-    header: string;
-    data: string;
-    time: string;
+    _id: string;
+    name: string;
+    text: string;
+    user: User;
+    createdAt: string;
+    likes: number;
 }
 
 export type NewsStore = {

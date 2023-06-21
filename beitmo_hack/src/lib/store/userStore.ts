@@ -16,7 +16,6 @@ export const useUserStore = create<UserStore>()(devtools(immer((set) => ({
 			set({ loading: true });
 			const response = await axios.get(GET_USER);
 			const {data} = await response;
-			console.log(data);
 			set({user: data, loading: false});
 		} catch (error) {
 			await Router.push("/app/login");

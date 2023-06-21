@@ -1,19 +1,23 @@
 import React from "react";
-import HomeIcon from "../../lib/icons/HomeIcon";
-import TicketIcon from "../../lib/icons/TicketIcon";
-import WarningIcon from "../../lib/icons/WarningIcon";
+import HomeIcon from "../../lib/icons/home";
 import Logotype from "../Logotype/Logotype";
 import Menu from "../Menu/Menu";
 import MenuItem from "../MenuItem/MenuItem";
 import { MenuItemProps } from "../MenuItem/types";
 import styles from "./styles.module.scss";
-import UserIcon from "../../lib/icons/UserIcon";
+import ProfileIcon from "../../lib/icons/profile";
+import ScheduleIcon from "../../lib/icons/schedule";
+import FinanceIcon from "../../lib/icons/finance";
 
 const MenuItems: MenuItemProps[] = [
 	{ icon: <HomeIcon />, name: "Главная", href: "/app/home" },
-	{ icon: <UserIcon />, name: "Профиль", href: "/app/profile" },
-	{ icon: <TicketIcon />, name: "Мои мероприятия", href: "/app/events" },
-	{ icon: <WarningIcon />, name: "Правила", href: "/app/rules" },
+	{ icon: <ProfileIcon />, name: "Профиль", href: "/app/profile" },
+	{ icon: <ScheduleIcon />, name: "Расписание", href: "/app/profile", wrap: [
+		{ name: "Главная", href: "/app/home" },
+		{ name: "Профиль", href: "/app/profile" },
+	]
+	},
+	{ icon: <FinanceIcon />, name: "Финансы", href: "/app/profile" },
 ];
 
 const NavigationBar = () => {
