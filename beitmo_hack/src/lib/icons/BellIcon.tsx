@@ -1,10 +1,10 @@
 import React from "react";
 import { IconProps } from "./types";
-import {MAIN_COLOR} from "../../ui/const/colors";
+import {GRAY_COLOR, MAIN_COLOR} from "../../ui/const/colors";
 
 
 const BellIcon = ({
-	color = MAIN_COLOR,
+	color = GRAY_COLOR,
 	height = 18,
 	width = 18,
 	rotation = 0,

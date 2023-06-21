@@ -2,7 +2,7 @@ import React from "react";
 import { GRAY_COLOR } from "../../ui/const/colors";
 import { IconProps } from "./types";
 
-const sheduleIcon = ({
+const scheduleIcon = ({
 	color = GRAY_COLOR,
 	height = 16,
 	width = 16,
@@ -26,4 +26,4 @@ const sheduleIcon = ({
 		</svg>
 	);
 };
-export default sheduleIcon;
+export default scheduleIcon;

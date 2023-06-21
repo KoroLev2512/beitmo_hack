@@ -4,7 +4,6 @@ import {useRouter} from "next/router";
 import ContentWrapper from "../ContentWrapper/ContentWrapper";
 import NavigationBar from "../NavigationBar/NavigationBar";
 import PageWrapper from "../PageWrapper/PageWrapper";
-import { ProfileBar } from "../ProfileBar";
 import {useMountEffect} from "../../hooks/useMountEffect";
 import {useAppStore} from "../../lib/store/appStore";
 import {parseCookies} from "nookies";
@@ -12,7 +11,6 @@ import { Layout } from "./types";
 
 const AppWrapper = (props: Layout) => {
 	const {children} = props;
-	const { route} = useRouter();
 	const [isDarkMode, toggleDarkMode] = useAppStore(state => [state.isDarkMode, state.toggleDarkMode]);
 	const defaultTheme = parseCookies().theme || "light";
 
@@ -39,9 +37,6 @@ const AppWrapper = (props: Layout) => {
 			</Head>
 			<NavigationBar />
 			<ContentWrapper>{children}</ContentWrapper>
-			{route === "/app/home" && (
-				<ProfileBar />
-			)}
 		</PageWrapper>
 	);
 };

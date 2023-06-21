@@ -1,0 +1,42 @@
+.ProfileLayout {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  & > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding-right: 30px;
+    border-right: 1px solid var(--secondary-gray-color);
+  }
+  &_date {
+    padding: 0 20px;
+    border-right: 1px solid var(--secondary-gray-color);
+  }
+  &_notification {
+    padding: 0 20px;
+    border-right: 1px solid var(--secondary-gray-color);
+  }
+  &_profile {
+    padding: 0 20px;
+    border-right: 1px solid var(--secondary-gray-color);
+    display: flex;
+    & :first-child {
+      margin-right: 10px;
+    }
+    &_isu {
+      margin-bottom: 0;
+    }
+  }
+  &_language {
+    padding-left: 20px;
+  }
+}
