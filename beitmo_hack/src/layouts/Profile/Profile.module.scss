@@ -1,0 +1,49 @@
+@import "../../../styles/variables";
+
+.ProfilePage {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  &_main {
+    display: flex;
+    flex-direction: column;
+    &_info {
+      background: var(--white-color);
+      padding: 40px;
+      border-radius: 45px;
+      display: flex;
+      margin-bottom: 24px;
+      &_photo {
+        height: 312px;
+        width: 228px;
+        border-radius: 30px;
+        overflow: hidden;
+        margin-right: 35px;
+      }
+      &_content {
+        display: flex;
+        flex-direction: column;
+      }
+      &_name {
+        margin-bottom: 27px;
+      }
+      &_label {
+        color: var(--gray-color);
+        font-size: $font-xs;
+        margin-bottom: 20px;
+      }
+      &_data {
+        color: var(--main-color);
+        font-size: $font-sm;
+        margin-bottom: 20px;
+      }
+      &_horizontal {
+        display: flex;
+        & > div {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

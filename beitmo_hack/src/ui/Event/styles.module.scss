@@ -130,6 +130,7 @@
 }
 .cardItemTitle {
   margin-bottom: 16px;
+  font-size: $font-xs;
 }
 .requestsButton {
   margin-left: auto;
@@ -153,11 +154,16 @@
 }
 
 .pastEventsSection {
-  padding: 0 16px;
+  //padding: 0 16px;
+  & > h2 {
+    margin-bottom: 16px;
+  }
 }
 .pastEventsList {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
 }
 .pastEventsItem {
   position: relative;
@@ -167,7 +173,6 @@
   background-color: $secondary-background-color;
   padding: 26px 26px;
   border-radius: 30px;
-  margin: 0 16px 16px 0;
 }
 
 .cardItemButtons {
@@ -175,7 +180,7 @@
   margin-top: 16px;
   & button {
     margin-right: 8px;
-    font-size: 10px;
+    font-size: 8px;
     padding: 6px 21px;
   }
   & button:last-child {

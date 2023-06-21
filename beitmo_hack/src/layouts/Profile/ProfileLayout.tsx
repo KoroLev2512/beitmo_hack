@@ -1,11 +1,10 @@
 import React from "react";
-import {LayoutType} from "../types";
+import {LayoutType} from "../../ui/types";
 
 const ProfileLayout = (props: LayoutType) => {
 	const { children } = props;
 	return (
 		<div>
-            Редактирование профиля
 			{children}
 		</div>
 	);

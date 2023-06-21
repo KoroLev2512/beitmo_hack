@@ -14,14 +14,10 @@ export const useUserStore = create<UserStore>()(devtools(immer((set) => ({
 	getUser: async () => {
 		try {
 			set({ loading: true });
-			const userId = localStorage.getItem("userId") || 1000;
-
-			if (!userId) {
-				return;
-			}
 			const response = await axios.get(GET_USER);
 			const {data} = await response;
-			set({user: data.user, loading: false});
+			console.log(data);
+			set({user: data, loading: false});
 		} catch (error) {
 			await Router.push("/app/login");
 			set({ loading: false, user: null, error: `${error}` });

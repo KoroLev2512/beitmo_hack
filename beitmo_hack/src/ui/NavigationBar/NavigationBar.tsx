@@ -7,9 +7,11 @@ import Menu from "../Menu/Menu";
 import MenuItem from "../MenuItem/MenuItem";
 import { MenuItemProps } from "../MenuItem/types";
 import styles from "./styles.module.scss";
+import UserIcon from "../../lib/icons/UserIcon";
 
 const MenuItems: MenuItemProps[] = [
 	{ icon: <HomeIcon />, name: "Главная", href: "/app/home" },
+	{ icon: <UserIcon />, name: "Профиль", href: "/app/profile" },
 	{ icon: <TicketIcon />, name: "Мои мероприятия", href: "/app/events" },
 	{ icon: <WarningIcon />, name: "Правила", href: "/app/rules" },
 ];

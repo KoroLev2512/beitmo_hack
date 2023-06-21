@@ -1,26 +1,22 @@
 import React from "react";
-import {useUserContext} from "../../../context/UserContext";
-import {ProfileEditPopup} from "../../../ui/Popups";
 import ProfileLayout from "../../../layouts/Profile/ProfileLayout";
-import {PrimaryButton} from "../../../ui/Button";
-import Link from "next/link";
+import {useUserStore} from "../../../lib/store/userStore";
+import {Profile} from "../../../layouts/Profile/Profile";
 
 const ProfilePage = () => {
-    const {user} = useUserContext();
+	const [user] = useUserStore(state => [state.user]);
 
-    if (!user) {
-        return <>!!</>;
-    }
 
-    return (
-        <ProfileLayout>
-            <Link href="/app/profile/edit">
-                <PrimaryButton>
-                    редактировать
-                </PrimaryButton>
-            </Link>
-        </ProfileLayout>
-    );
+	return (
+		<ProfileLayout>
+			{/*<Link href="/app/profile/edit">*/}
+			{/*	<PrimaryButton>*/}
+			{/*        редактировать*/}
+			{/*	</PrimaryButton>*/}
+			{/*</Link>*/}
+			<Profile user={user}/>
+		</ProfileLayout>
+	);
 };
 
 export default ProfilePage;
