@@ -170,9 +170,9 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  background-color: $secondary-background-color;
+  border-radius: 12px;
+  border: 1px solid #E7E7E7;
   padding: 26px 26px;
-  border-radius: 30px;
 }
 
 .cardItemButtons {

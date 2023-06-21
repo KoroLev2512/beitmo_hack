@@ -8,12 +8,12 @@ interface IProps {
 }
 
 const PastEvents = (props: IProps) => {
-	const { title = "Прошедшие мероприятия" } = props;
+	const { title} = props;
 	return (
 		<div className={styles.pastEventsSection}>
-			<Text as="h2">
+			{title ? (<Text as="h2">
 				{title}
-			</Text>
+			</Text>) : null}
 			<div className={styles.pastEventsList}>
 				<PastEventItem/>
 				<PastEventItem/>

@@ -1,0 +1,12 @@
+.ProfileActivity {
+  &_activities {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1fr;
+    grid-column-gap: 30px;
+    &_card {
+      border-radius: 12px;
+      border: 1px solid #E7E7E7;
+      padding: 15px 20px;
+    }
+  }
+}

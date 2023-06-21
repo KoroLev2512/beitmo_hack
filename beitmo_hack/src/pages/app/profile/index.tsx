@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileLayout from "../../../layouts/Profile/ProfileLayout";
 import {useUserStore} from "../../../lib/store/userStore";
-import {Profile} from "../../../layouts/Profile/Profile";
+import {ProfileMain} from "../../../layouts/Profile/Main/ProfileMain";
 
 const ProfilePage = () => {
 	const [user] = useUserStore(state => [state.user]);
@@ -9,12 +9,7 @@ const ProfilePage = () => {
 
 	return (
 		<ProfileLayout>
-			{/*<Link href="/app/profile/edit">*/}
-			{/*	<PrimaryButton>*/}
-			{/*        редактировать*/}
-			{/*	</PrimaryButton>*/}
-			{/*</Link>*/}
-			<Profile user={user}/>
+			<ProfileMain user={user}/>
 		</ProfileLayout>
 	);
 };

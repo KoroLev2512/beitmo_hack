@@ -11,13 +11,14 @@ import FinanceIcon from "../../lib/icons/finance";
 
 const MenuItems: MenuItemProps[] = [
 	{ icon: <HomeIcon />, name: "Главная", href: "/app/home" },
-	{ icon: <ProfileIcon />, name: "Профиль", href: "/app/profile" },
-	{ icon: <ScheduleIcon />, name: "Расписание", href: "/app/profile", wrap: [
+	{ icon: <ProfileIcon />, name: "Профиль", href: "/app/profile", wrap: [
 		{ name: "Перс. страница", href: "/app/profile" },
 		{ name: "Моя активность", href: "/app/profile/activity" },
 		{ name: "Мероприятия", href: "/app/profile/events" },
 	]
 	},
+	{ icon: <ScheduleIcon />, name: "Расписание", href: "/app/profile" },
+
 	{ icon: <FinanceIcon />, name: "Финансы", href: "/app/profile" },
 ];
 

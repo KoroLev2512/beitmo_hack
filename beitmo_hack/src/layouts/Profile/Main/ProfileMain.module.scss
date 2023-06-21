@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@import "../../../../styles/variables";
 
 .ProfilePage {
   display: grid;
@@ -11,7 +11,8 @@
     &_info {
       background: var(--white-color);
       padding: 40px;
-      border-radius: 45px;
+      border-radius: 12px;
+      border: 1px solid #E7E7E7;
       display: flex;
       margin-bottom: 24px;
       &_photo {
