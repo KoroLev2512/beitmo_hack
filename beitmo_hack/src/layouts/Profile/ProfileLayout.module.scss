@@ -32,6 +32,9 @@
     & :first-child {
       margin-right: 10px;
     }
+    & :last-child {
+      margin-left: 10px;
+    }
     &_isu {
       margin-bottom: 0;
     }
